@@ -1,4 +1,4 @@
-module k8s-exec-pod
+module github.com/sheikh1309/k8s-exec-pod
 
 go 1.15
 
