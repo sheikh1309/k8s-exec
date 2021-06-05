@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/sheikh1309/k8s-exec/pkgs/k8s"
-	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/apis/meta/v1"
 	"os"
 	"strings"
 )

@@ -3,14 +3,14 @@ package k8s
 import (
 	"fmt"
 	"io"
-	corev1 "k8s.io/api/core/v1"
+	"k8s.io/api/core/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/kubernetes/scheme"
-	restclient "k8s.io/client-go/rest"
+	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/remotecommand"
 )
 
-func ExecCmdInPod(client *kubernetes.Clientset, config *restclient.Config, podName, ns string, command string, stdin io.Reader, stdout, stderr io.Writer) error {
+func ExecCmdInPod(client *kubernetes.Clientset, config *rest.Config, podName, ns string, command string, stdin io.Reader, stdout, stderr io.Writer) error {
 	cmd := []string{
 		"sh",
 		"-c",
@@ -18,7 +18,7 @@ func ExecCmdInPod(client *kubernetes.Clientset, config *restclient.Config, podNa
 	}
 	req := client.CoreV1().RESTClient().Post().Resource("pods").Name(podName).Namespace(ns).SubResource("exec")
 
-	option := &corev1.PodExecOptions{
+	option := &v1.PodExecOptions{
 		Command: cmd,
 		Stdin:   true,
 		Stdout:  true,

@@ -1,8 +1,6 @@
 package command
 
-import (
-	"github.com/thatisuday/commando"
-)
+import "github.com/thatisuday/commando"
 
 func SetExecutable(name string, version string, desc string)  {
 	commando.
