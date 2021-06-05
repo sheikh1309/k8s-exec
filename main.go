@@ -5,5 +5,5 @@ import (
 )
 
 func main()  {
-	command.SetExecutable("k8s-exec", "1.0.3", "This tool is for exec commands in deployment pods or in specific pod")
+	command.SetExecutable("k8s-exec", "1.0.4", "This tool is for exec commands in deployment pods or in specific pod")
 }
