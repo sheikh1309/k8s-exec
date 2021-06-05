@@ -1,4 +1,4 @@
-# tree
+# K8S-exec
 ![go-version](https://img.shields.io/badge/Go%20Version-v1.15-blue) &nbsp;
 
 A command-line tool to exec commands in k8s pods
