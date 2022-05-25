@@ -8,7 +8,7 @@ A command-line tool to exec commands in k8s pods
 
 ## Installation
 ```
-$ GO111MODULE=on go get github.com/sheikh1309/k8s-exec
+$ go install github.com/sheikh1309/k8s-exec@latest
 ```
 
 ## Usage
